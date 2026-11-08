@@ -1,0 +1,58 @@
+@import "tailwindcss";
+
+/*
+ * Tokens del diseño, tomados de codigoveloz.com/comprar.
+ * En Tailwind 4 un token declarado aquí genera sus utilidades: por ejemplo
+ * --color-primario habilita bg-primario, text-primario, border-primario...
+ */
+@theme {
+  /* Morado de marca */
+  --color-primario: #351f63;
+  --color-primario-claro: #4a2d85;
+  --color-primario-oscuro: #281748;
+  --color-primario-tenue: #eeeef2;
+
+  /* Verde azulado de acento: estados correctos y elementos activos */
+  --color-acento: #1fca9d;
+  --color-acento-oscuro: #17a37e;
+  --color-acento-tenue: #e6f9f3;
+
+  /* Avisos y errores */
+  --color-alerta: #d97706;
+  --color-alerta-tenue: #fef3c7;
+  --color-peligro: #dc2626;
+  --color-peligro-oscuro: #b91c1c;
+  --color-peligro-tenue: #fee2e2;
+
+  /* Superficies y texto */
+  --color-lienzo: #f7f7fa;
+  --color-superficie: #ffffff;
+  --color-borde: #e5e5ec;
+  --color-texto: rgba(0, 0, 0, 0.87);
+  --color-texto-suave: rgba(0, 0, 0, 0.6);
+  --color-texto-tenue: rgba(0, 0, 0, 0.4);
+
+  /* Tipografía: Poppins para títulos, Roboto para cuerpo */
+  --font-titulo: "Poppins", ui-sans-serif, system-ui, sans-serif;
+  --font-cuerpo: "Roboto", ui-sans-serif, system-ui, sans-serif;
+
+  /* La referencia usa 8px en tarjetas y botones */
+  --radius-base: 8px;
+}
+
+@layer base {
+  body {
+    font-family: var(--font-cuerpo);
+    background-color: var(--color-lienzo);
+    color: var(--color-texto);
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: var(--font-titulo);
+    font-weight: 700;
+    color: var(--color-primario);
+  }
+}
